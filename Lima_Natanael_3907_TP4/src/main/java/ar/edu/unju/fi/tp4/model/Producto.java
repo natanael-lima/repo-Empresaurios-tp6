@@ -1,10 +1,13 @@
 package ar.edu.unju.fi.tp4.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -30,6 +33,8 @@ public class Producto {
 	@Column(name = "pro_stock")
 	private int stock;
 	
+	@OneToMany(mappedBy= "producto")
+	private List<Compra> compras;
 	
 	public Producto() {
 		
