@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,17 +24,28 @@ import org.springframework.stereotype.Component;
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "cli_codigo")
 	private int codigo;
+	@Column(name = "cli_tipoDocumento")
 	private String tipoDocumento;
+	@Column(name = "cli_nroDocumento")
 	private int nroDocumento;
+	@Column(name = "cli_nombreApellido")
 	private String nombreApellido;
+	@Column(name = "cli_mail")
 	private String mail;
+	@Column(name = "cli_password")
 	private String password;
+	@Column(name = "cli_fechaNacimiento")
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate fechaNacimiento;
+	@Column(name = "cli_edad")
 	private int edad;
+	@Column(name = "cli_codigoAreaTelefono")
 	private int codigoAreaTelefono;
+	@Column(name = "cli_nroTelefono")
 	private int nroTelefono;
+	@Column(name = "cli_fechaUltimaCompra")
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate fechaUltimaCompra;
 	
