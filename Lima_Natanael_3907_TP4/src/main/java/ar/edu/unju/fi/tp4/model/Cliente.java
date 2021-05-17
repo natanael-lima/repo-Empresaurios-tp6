@@ -23,8 +23,9 @@ import org.springframework.stereotype.Component;
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int nroDocumento;
+	private int codigo;
 	private String tipoDocumento;
+	private int nroDocumento;
 	private String nombreApellido;
 	private String mail;
 	private String password;
@@ -55,6 +56,17 @@ public class Cliente {
 		this.codigoAreaTelefono = codigoAreaTelefono;
 		this.nroTelefono = nroTelefono;
 		this.fechaUltimaCompra = fechaUltimaCompra;
+	}
+
+	
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
 
 
