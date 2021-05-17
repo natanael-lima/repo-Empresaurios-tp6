@@ -5,6 +5,9 @@ import java.time.LocalDateTime;
 import java.time.Period;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import static java.time.temporal.ChronoUnit.DAYS;
@@ -18,9 +21,10 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "CLIENTES")
 public class Cliente {
-	
-	private String tipoDocumento;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int nroDocumento;
+	private String tipoDocumento;
 	private String nombreApellido;
 	private String mail;
 	private String password;

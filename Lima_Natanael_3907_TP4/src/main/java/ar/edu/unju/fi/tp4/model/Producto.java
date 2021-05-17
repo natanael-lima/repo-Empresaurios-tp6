@@ -1,6 +1,9 @@
 package ar.edu.unju.fi.tp4.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -13,6 +16,8 @@ public class Producto {
 /**
  * Atributos
  */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int codigo;
 	private String nombre;
 	private double precio;
