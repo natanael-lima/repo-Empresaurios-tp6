@@ -1,9 +1,14 @@
 package ar.edu.unju.fi.tp4.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@Entity
+@Table(name = "COMPRAS")
 public class Compra {
 
 	private int id;

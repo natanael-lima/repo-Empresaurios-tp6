@@ -3,6 +3,10 @@ package ar.edu.unju.fi.tp4.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import static java.time.temporal.ChronoUnit.DAYS;
 
 import java.time.Duration;
@@ -11,6 +15,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
 @Component
+@Entity
+@Table(name = "CLIENTES")
 public class Cliente {
 	
 	private String tipoDocumento;
