@@ -18,9 +18,10 @@ import java.time.Duration;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
-@Component
+
 @Entity
 @Table(name = "CLIENTES")
+@Component
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
