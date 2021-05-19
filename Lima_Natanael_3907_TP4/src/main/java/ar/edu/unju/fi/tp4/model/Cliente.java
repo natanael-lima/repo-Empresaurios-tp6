@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Cliente {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "cli_codigo")
 	private int codigo;
 	@Column(name = "cli_tipoDocumento")

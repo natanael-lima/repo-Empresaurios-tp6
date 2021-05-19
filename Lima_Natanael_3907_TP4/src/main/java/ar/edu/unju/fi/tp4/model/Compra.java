@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 @Table(name = "COMPRAS")
 public class Compra {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "com_id")
 	private int id;
     @ManyToOne(fetch=FetchType.LAZY)

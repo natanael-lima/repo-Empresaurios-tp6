@@ -21,7 +21,7 @@ public class Producto {
  * Atributos
  */
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "pro_codigo")
 	private int codigo;
 	@Column(name = "pro_nombre")

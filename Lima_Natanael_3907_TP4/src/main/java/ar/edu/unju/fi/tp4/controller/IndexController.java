@@ -105,8 +105,9 @@ public class IndexController {
 	@GetMapping("/index/compra")
 	public String getFormCompra(Model model) {
 		String text="";
+		String textProd=productoService.mostrarUltimoProducto().getNombre();
 		model.addAttribute(compra);
-		model.addAttribute("producto",productoService.mostrarUltimoProducto());
+		model.addAttribute("textProd",textProd);
 		if(productoService.obtenerListaProducto().size()==1) {
 		   text="No ingreso un producto";
 		   model.addAttribute("text",text);
